@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, rgb(26, 1, 163), rgb(15, 4, 77));
+  color: white;
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+
+header {
+  font-size: 2rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header input,
+header button,
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+header input,
+form input {
+  border-radius: 25px;
+}
+header button,
+form button {
+  color: yellow;
+  background: none;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+header button:hover,
+form button:hover {
+  color: green;
+}
+
+.todos__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todos__list {
+  min-width: 30%;
+  list-style: none;
+}
+.todos__div {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+.todos__div li {
+  flex: 1;
+}
+.todos__button {
+  background: yellow;
+  color: black;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.todos__button__check {
+  background: green;
+}
+.todos__items {
+  padding: 0rem 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

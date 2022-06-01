@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, rgb(26, 1, 163), rgb(15, 4, 77));
+  color: white;
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+
+header {
+  font-size: 2rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input,
+  button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+  }
+  input {
+    border-radius: 25px;
+  }
+  button {
+    color: yellow;
+    background: none;
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: green;
+    }
+  }
+}
+
+.todos {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__list {
+    min-width: 30%;
+    list-style: none;
+  }
+  &__div {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    li {
+      flex: 1;
+    }
+  }
+  &__button {
+    background: yellow;
+    color: black;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  &__button__check {
+    background: green;
+  }
+  &__items {
+    padding: 0rem 0.5rem;
+  }
+}

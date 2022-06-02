@@ -7,10 +7,12 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, rgb(26, 1, 163), rgb(15, 4, 77));
-  color: white;
+  background-image: linear-gradient(120deg, rgb(131, 7, 7), rgb(151, 75, 3));
+  color: rgb(234, 232, 255);
   min-height: 100vh;
   font-family: "Quicksand", sans-serif;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 header {
@@ -46,6 +48,22 @@ form {
   }
 }
 
+select {
+  -webkit-apperance: none;
+  -moz-appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  width: 9rem;
+  padding: 1rem;
+  margin-top: 0.4rem;
+  cursor: pointer;
+  border-radius: 25px;
+  &:focus {
+    border: #000000 2px solid;
+  }
+}
+
 .todos {
   &__container {
     display: flex;
@@ -70,17 +88,57 @@ form {
     }
   }
   &__button {
-    background: yellow;
+    background: #870000;
     color: black;
     padding: 1rem;
     font-size: 1rem;
     border: none;
     cursor: pointer;
+    &__check {
+      background: green;
+    }
   }
-  &__button__check {
-    background: green;
+  &__controls {
+    display: flex;
   }
   &__items {
     padding: 0rem 0.5rem;
+  }
+  &__strike-off {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+}
+
+.fa-check,
+.fa-ban {
+  pointer-events: none;
+}
+
+.fa-solid:focus {
+  color: lightblue;
+  border: none;
+}
+
+.slide-out {
+  transform: translateZ(-1100px) translateX(1000px);
+  opacity: 0;
+}
+
+@media screen and (max-width: 767px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    max-width: 75%;
+  }
+  .todos {
+    &__items {
+      max-width: 80%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   }
 }

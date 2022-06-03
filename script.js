@@ -1,8 +1,8 @@
 //Définition des Sélecteurs
 const todoInput = document.getElementById("todo__input");
+const todoFilter = document.getElementById("todos__filter");
 const todoButton = document.querySelector(".todo__button");
 const todoList = document.querySelector(".todos__list");
-const todoFilter = document.getElementById("todos__filter");
 
 //Ecoute
 todoButton.addEventListener("click", addItem);
@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", retrieveItemsFromLocalStorage);
 //Fonctions
 function addItem(e) {
   e.preventDefault();
-
-  //Todo DIV
+  //Création d'une div encadrant les todos
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todos__div");
   //Création de la liste
@@ -41,7 +40,6 @@ function addItem(e) {
 
 function deleteCheckItem(e) {
   const item = e.target;
-
   if (item.classList[1] === "todos__button__delete") {
     item.parentElement.classList.add("slide-out");
     removeItemsFromLocalStorage(item.parentElement);
@@ -93,7 +91,6 @@ function saveTodosItems(todo) {
 
 function retrieveItemsFromLocalStorage() {
   let todos;
-  //On vérifie si il y a des items existants dans le Local Storage
   if (localStorage.getItem("todos") === null) {
     todos = [];
   } else {
@@ -101,7 +98,7 @@ function retrieveItemsFromLocalStorage() {
   }
 
   todos.forEach(function (todo) {
-    //Todo DIV
+    //Création d'une div encadrant les todos
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todos__div");
     //Création de la liste
